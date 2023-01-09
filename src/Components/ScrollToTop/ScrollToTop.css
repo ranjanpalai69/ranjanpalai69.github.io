@@ -1,0 +1,19 @@
+.scroll-top {
+  position: fixed;
+  bottom: 2em;
+  right: 1em;
+  background-color: transparent;
+}
+
+@media (max-width: 1023px) {
+  .scroll-top {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .scroll-top {
+    display: none;
+  }
+}
+

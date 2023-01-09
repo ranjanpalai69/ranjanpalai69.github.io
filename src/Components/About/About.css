@@ -1,0 +1,145 @@
+.about {
+  flex-direction: column;
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  text-align: center;
+}
+.about__name {
+  color: var(--clr-primary);
+  text-align: center;
+
+}
+.about > :nth-child(2) {
+  margin-top: 1.2em;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--clr-fg-alt);
+}
+.About_logocontainer {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: center;
+  margin-right: 200px;
+  border-radius: 50%;
+
+}
+
+.About_logocontainer > img {
+  width: 100%;
+  height: 100%;
+}
+
+.about__desc {
+  font-size: 1rem;
+  max-width: 100%;
+  text-align: center;
+
+}
+
+.about__desc,
+.about__contact {
+  margin-top: 2.4em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.about .link--icon {
+  margin-right: 0.8em;
+}
+
+.about .btn--outline {
+  margin-right: 1em;
+
+}
+.btnResume{
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+  border-radius: 5px;
+  height: 50px;
+  cursor: pointer;
+  padding: 0px 30px;
+  margin-top: 10px;
+}
+.btnResume:hover{
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+}
+
+@media (max-width: 1024px) {
+  .About_logocontainer {
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-left: 200px;
+    height: 100vh;
+    width: 60%;
+  
+  }
+  
+  .About_logocontainer > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+  }
+  .about{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+ 
+  .mobileHead{
+    align-content: center;
+    font-size: 2em;
+  }
+  .app .about {
+    align-items: flex-start;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+  .about > :nth-child(2) {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .About_logocontainer {
+    flex-basis: 45%;
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+    height: 100vh;
+    width: 60%;
+  
+  }
+  
+  .About_logocontainer > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+  }
+  .about{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .mobileHead{
+    align-content: center;
+    font-size: 1em;
+  }
+  .app .about {
+    align-items: flex-start;
+    margin-top: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+  .about > :nth-child(2) {
+    font-size: 0.75rem;
+  }
+}
