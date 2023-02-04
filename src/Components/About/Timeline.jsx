@@ -65,7 +65,7 @@ export const Timeline = () => {
             </h4>
             <br />
             <p data-aos="fade-right">
-              Military Styled Coding School, Where i learned about Full-Stack Web Developement, DS & Algoriths and Other Soft-Skills
+              Military Styled Coding School, Where i learned about Full-Stack Web Developement, DS & Algorithms and Other Soft-Skills
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement

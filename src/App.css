@@ -10,9 +10,9 @@
 .light {
   --clr-bg: #fff;
   --clr-bg-alt: #fff;
-  --clr-fg: #444;
-  --clr-fg-alt: #444;
-  --clr-primary: #7ac9f5ed;
+  --clr-fg: rgb(56, 56, 56);
+  --clr-fg-alt: rgb(82, 82, 82);
+  --clr-primary: #f03277db;;
   --shadow:rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
   rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -22,7 +22,7 @@
   --clr-bg-alt: #080b15;
   --clr-fg: #bdbddd;
   --clr-fg-alt: #fff;
-  --clr-primary: #7ac9f5ed;
+  --clr-primary: #0fb7c3 ;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
