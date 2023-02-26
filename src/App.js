@@ -9,6 +9,7 @@ import { Github } from "./Components/About/Github";
 import { Projects } from "./Components/Projects/Projects";
 import { Footer } from "./Components/Footer/Footer";
 import { ScrollToTop } from "./Components/ScrollToTop/ScrollToTop";
+import {Stat} from "./Components/Stats/Stats";
 import useReady from "./Context/useReady";
 import LoadingPage from "./Components/About/Loading";
 import Contact from "./Components/Contact/Contact";
@@ -30,6 +31,7 @@ export default function App() {
       <main>
         <About />
         <Github />
+        <Stat/>
         <section id="#projects">
           <Projects />
         </section>

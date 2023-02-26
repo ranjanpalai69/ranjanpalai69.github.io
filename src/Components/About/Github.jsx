@@ -20,7 +20,7 @@ export const Github = () => {
         </h2>
         <GitHubCalendar
           username="ranjanpalai69"
-          year={new Date().getFullYear()}
+          
           blockSize={15}
           blockMargin={5}
         />

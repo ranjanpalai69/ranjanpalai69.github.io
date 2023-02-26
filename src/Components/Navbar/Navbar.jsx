@@ -3,9 +3,9 @@ import { ThemeContext } from "../../Context/theme";
 import "./Navbar.css";
 import Brightness2Icon from "@material-ui/icons/Brightness2";
 import WbSunnyRoundedIcon from "@material-ui/icons/WbSunnyRounded";
+import resume from "../../assets/Ranjan-Palai-Resume.pdf";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-
 export const Navbar = () => {
   const [{ themename, toggeltheme }] = React.useContext(ThemeContext);
   const [showNavList, setShowNavList] = React.useState(false);
@@ -17,6 +17,11 @@ export const Navbar = () => {
     }
     setShowNavList(!showNavList);
   };
+
+  const openNew=()=>{
+    window.open("https://drive.google.com/file/d/1UtxxK7TwmZPjRIDb9zk2S7D4WI8tMj-3/view?usp=share_link");
+  }
+
   return (
     <>
       <nav className="center nav">
@@ -71,11 +76,12 @@ export const Navbar = () => {
           </li>
           <li className="nav__list-item">
             <a
-              href="https://drive.google.com/file/d/1UtxxK7TwmZPjRIDb9zk2S7D4WI8tMj-3/view?usp=share_link"
-              onClick={toggleNavList}
+              href={resume}
+              onClick={openNew}
               className="link link--nav"
               target="_blank"
-              rel="noreferrer"
+              download={true}
+              
             >
               Resume
             </a>

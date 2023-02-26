@@ -10,7 +10,11 @@ import { Introduction } from "./Introduction";
 import { Timeline } from "./Timeline";
 import { Techstacks } from "./Techstacks";
 import SocialLinks from "./SocialLinks";
+import resume from "../../assets/Ranjan-Palai-Resume.pdf"
 
+const openNew=()=>{
+  window.open("https://drive.google.com/file/d/1UtxxK7TwmZPjRIDb9zk2S7D4WI8tMj-3/view?usp=share_link");
+}
 
 export const About = () => {
   return (
@@ -72,16 +76,26 @@ export const About = () => {
           </a>
         </div>
 
-        <button
+        <a 
+      href= {resume}
+      
+      download={true}
+      
+      className="link link--nav"
+      target="_blank"
+      style={{textDecoration:"none"}}
+      onClick={openNew}
+
+      >
+      <button
           className="btnResume"
-          onClick={() => {
-            window.open(
-              "https://drive.google.com/file/d/1UtxxK7TwmZPjRIDb9zk2S7D4WI8tMj-3/view?usp=share_link"
-            );
-          }}
+        
         >
           Resume
         </button>
+       
+        
+      </a>
         </div>
         <div className="About_logocontainer">
               <img src="https://avatars.githubusercontent.com/u/107481896?s=400&u=056d9b468f39b8400a039e3e5afcd8439037075f&v=4" alt="profile" />
