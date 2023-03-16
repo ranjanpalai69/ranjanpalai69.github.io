@@ -2,6 +2,8 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import resume from "../../assets/Ranjan-Palai-Resume.pdf";
+import { openNew } from "./About";
 
 const SocialLinks = () => {
   const links = [
@@ -40,7 +42,7 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "https://drive.google.com/file/d/1UtxxK7TwmZPjRIDb9zk2S7D4WI8tMj-3/view?usp=share_link",
+      href: resume,
       style: "rounded-br-md",
       download: true,
     },
@@ -59,6 +61,7 @@ const SocialLinks = () => {
             }
           >
             <a
+              
               href={href}
               className="flex justify-between items-center w-full text-white"
               download={download}

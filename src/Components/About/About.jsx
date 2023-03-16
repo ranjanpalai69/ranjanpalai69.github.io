@@ -12,7 +12,7 @@ import { Techstacks } from "./Techstacks";
 import SocialLinks from "./SocialLinks";
 import resume from "../../assets/Ranjan-Palai-Resume.pdf"
 
-const openNew=()=>{
+export const openNew=()=>{
   window.open("https://drive.google.com/file/d/1UtxxK7TwmZPjRIDb9zk2S7D4WI8tMj-3/view?usp=share_link");
 }
 
