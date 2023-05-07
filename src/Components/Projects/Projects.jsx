@@ -1,6 +1,6 @@
 import React from "react";
 import "./Projects.css";
-import { FaReact, FaHtml5 } from "react-icons/fa";
+import { FaReact, FaHtml5, FaNodeJs } from "react-icons/fa";
 import {
   SiChakraui,
   SiBlockchaindotcom,
@@ -19,9 +19,11 @@ import {
   SiRedux,
   SiCss3,
   SiBootstrap,
-  SiReduxsaga
+  SiReduxsaga,
+  SiTypescript,
+  SiJsonwebtokens
 } from "react-icons/si";
-import { DiCss3, DiHtml5 } from "react-icons/di";
+import { DiCss3, DiFirebase, DiHtml5 } from "react-icons/di";
 import { VscJson } from "react-icons/vsc";
 import { IoLogoJavascript } from "react-icons/io";
 export const Projects = () => {
@@ -212,6 +214,57 @@ export const Projects = () => {
                   </a>
                   <a
                     href="https://github.com/ranjanpalai69/Weather-Javascript"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      View Code
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* 5th project */}
+          <div className="projects_container" data-aos="fade-right">
+            <div className="project">
+              <div className="project_videocontainer">
+                <div>
+                  <img
+                    src="https://user-images.githubusercontent.com/112635764/232017763-ba8a239e-8455-4917-9231-7d5f5ce5d3ac.jpg"
+                    alt="Forum App"
+                  />
+                </div>
+              </div>
+              <div className="project_information">
+                <h2>Forum App</h2>
+                <p>
+               
+             A full stack forum app based on a social media platform allows users to participate in discussions, share information, and connect with like-minded individuals in a community-driven environment.
+                </p>
+                <div>
+                  <FaReact/>
+                  <SiRedux/>
+                  <SiTypescript />
+                  <FaNodeJs/>
+                  <SiExpress/>
+                  <SiMongodb/>
+                  <DiFirebase/> 
+                  <SiJsonwebtokens/>
+                  <SiChakraui/>
+                </div>
+                <div>
+                  <a
+                    href="https://forumapp-120fb.web.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      See this Live
+                    </span>
+                  </a>
+                  <a
+                    href="https://github.com/Vishwa9011/Forum_App"
                     target="_blank"
                     rel="noreferrer"
                   >
