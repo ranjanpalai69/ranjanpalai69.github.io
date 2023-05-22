@@ -250,8 +250,6 @@ export const Projects = () => {
                   <SiExpress/>
                   <SiMongodb/>
                   <DiFirebase/> 
-                  <SiJsonwebtokens/>
-                  <SiChakraui/>
                 </div>
                 <div>
                   <a

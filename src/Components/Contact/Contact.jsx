@@ -83,7 +83,7 @@ const Contact = () => {
 
           <div className="w-full flex justify-center mt-8 md:m-auto lg:-mt-5"  >
             <form
-             action="https://getform.io/f/5ed0fbc4-9d5b-40e5-8e56-c74357705252" method="POST" encType="multipart/form-data"
+             action="https://getform.io/f/dd32dd09-6a41-488c-b941-4677c549930a" method="POST" encType="multipart/form-data"
 
               className=" flex flex-col w-full md:w-1/2"
             >
