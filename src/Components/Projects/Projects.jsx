@@ -231,6 +231,55 @@ export const Projects = () => {
               <div className="project_videocontainer">
                 <div>
                   <img
+                    src="https://i.ibb.co/wRWJ8y5/shopwatch-wallpaper.png"
+                    alt="ShopWatch.."
+                  />
+                </div>
+              </div>
+              <div className="project_information">
+                <h2>ShopWatch..</h2>
+                <p>
+               
+                shopwatch is a online e-Eommerce website through which user can buy various types of watches as their requirements.
+                </p>
+                <div>
+                  <FaReact/>
+                  <SiRedux/>
+                  <DiCss3 />
+                  <FaNodeJs/>
+                  <SiExpress/>
+                  <SiMongodb/>
+                  <SiJsonwebtokens/> 
+                </div>
+                <div>
+                  <a
+                    href="https://shopwatch-pearl.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      See this Live
+                    </span>
+                  </a>
+                  <a
+                    href="https://github.com/ranjanpalai69/shopwatch-mern"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span type="button" className="btns onbt">
+                      View Code
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* 6th project  */}
+          <div className="projects_container" data-aos="fade-right">
+            <div className="project">
+              <div className="project_videocontainer">
+                <div>
+                  <img
                     src="https://user-images.githubusercontent.com/112635764/232017763-ba8a239e-8455-4917-9231-7d5f5ce5d3ac.jpg"
                     alt="Forum App"
                   />
@@ -274,7 +323,6 @@ export const Projects = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </>
