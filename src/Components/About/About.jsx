@@ -13,7 +13,7 @@ import SocialLinks from "./SocialLinks";
 import resume from "../../assets/Ranjan-Palai-Resume.pdf"
 
 export const openNew=()=>{
-  window.open("https://drive.google.com/file/d/1UtxxK7TwmZPjRIDb9zk2S7D4WI8tMj-3/view?usp=share_link");
+  window.open("https://drive.google.com/file/d/19ZZO9lSOfHjEek31QVbsEDOIEq6sUep7/view?usp=sharing");
 }
 
 export const About = () => {
@@ -98,7 +98,7 @@ export const About = () => {
       </a>
         </div>
         <div className="About_logocontainer">
-              <img src="https://avatars.githubusercontent.com/u/107481896?s=400&u=056d9b468f39b8400a039e3e5afcd8439037075f&v=4" alt="profile" />
+              <img src="https://avatars.githubusercontent.com/u/107481896?s=400&u=f2556b03ee7d9211f7acb7d86383a1a45d12165d&v=4" alt="profile" />
             </div>
       </div>
       <Introduction />

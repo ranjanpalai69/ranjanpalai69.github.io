@@ -19,7 +19,7 @@ export const Navbar = () => {
   };
 
   const openNew=()=>{
-    window.open("https://drive.google.com/file/d/1UtxxK7TwmZPjRIDb9zk2S7D4WI8tMj-3/view?usp=share_link");
+    window.open("https://drive.google.com/file/d/19ZZO9lSOfHjEek31QVbsEDOIEq6sUep7/view?usp=sharing");
   }
 
   return (

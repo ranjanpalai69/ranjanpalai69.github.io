@@ -302,7 +302,7 @@ export const Projects = () => {
                 </div>
                 <div>
                   <a
-                    href="https://forumapp-120fb.web.app/"
+                    href="https://forum-lake-chi.vercel.app/"
                     target="_blank"
                     rel="noreferrer"
                   >

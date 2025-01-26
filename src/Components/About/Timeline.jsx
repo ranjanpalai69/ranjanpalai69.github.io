@@ -30,10 +30,9 @@ export const Timeline = () => {
           My <span className="different">Timeline 💫</span>
         </h2>
         <VerticalTimeline lineColor={linecolor}>
-          
-          
-          <VerticalTimelineElement
-            date={"May 2022 - Present"}
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={"Aug 2019 - Jul 2023"}
             contentStyle={{
               boxShadow: `var(--shadow)`,
               border: "3px solid var(--clr-primary)",
@@ -55,7 +54,114 @@ export const Timeline = () => {
               className="vertical-timeline-element-title"
               data-aos="fade-right"
             >
-              Student
+              Software Engineer
+            </h3>
+            <h4
+              className="vertical-timeline-element-subtitle"
+              data-aos="fade-right"
+            >
+               Rampwin Technologies Pvt Ltd , Jaipur , Rajasthan
+            </h4>
+            <p data-aos="fade-right">
+            Oct 2024 - Present
+            </p>
+          </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={"Aug 2019 - Jul 2023"}
+            contentStyle={{
+              boxShadow: `var(--shadow)`,
+              border: "3px solid var(--clr-primary)",
+              backgroundColor: `var(--clr-bg)`,
+              textAlign: "center",
+              color: `var(--clr-fg-alt)`,
+            }}
+            contentArrowStyle={{
+              borderRight: "16px solid  var(--clr-primary)",
+            }}
+            iconStyle={{
+              border: ` 3px solid var(--clr-primary)`,
+              backgroundColor: `var(--clr-bg)`,
+              color: `var(--clr-primary)`,
+            }}
+            icon={<SchoolIcon />}
+          >
+            <h3
+              className="vertical-timeline-element-title"
+              data-aos="fade-right"
+            >
+              Software Developer (Frontend)
+            </h3>
+            <h4
+              className="vertical-timeline-element-subtitle"
+              data-aos="fade-right"
+            >
+               Venturesathi Business Services LLP , Rourkela , Odisha
+            </h4>
+            <p data-aos="fade-right">
+            Nov 2023 - Oct 2024
+            </p>
+          </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={"Aug 2019 - Jul 2023"}
+            contentStyle={{
+              boxShadow: `var(--shadow)`,
+              border: "3px solid var(--clr-primary)",
+              backgroundColor: `var(--clr-bg)`,
+              textAlign: "center",
+              color: `var(--clr-fg-alt)`,
+            }}
+            contentArrowStyle={{
+              borderRight: "16px solid  var(--clr-primary)",
+            }}
+            iconStyle={{
+              border: ` 3px solid var(--clr-primary)`,
+              backgroundColor: `var(--clr-bg)`,
+              color: `var(--clr-primary)`,
+            }}
+            icon={<SchoolIcon />}
+          >
+            <h3
+              className="vertical-timeline-element-title"
+              data-aos="fade-right"
+            >
+              Front-End Developer (React.Js)
+            </h3>
+            <h4
+              className="vertical-timeline-element-subtitle"
+              data-aos="fade-right"
+            >
+               ezTruck , Bhubaneswar , Odisha
+            </h4>
+            <p data-aos="fade-right">
+            Aug 20222 - Aug 2023
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            date={"Mar 2022 - Aug 2022"}
+            contentStyle={{
+              boxShadow: `var(--shadow)`,
+              border: "3px solid var(--clr-primary)",
+              backgroundColor: `var(--clr-bg)`,
+              textAlign: "center",
+              color: `var(--clr-fg-alt)`,
+            }}
+            contentArrowStyle={{
+              borderRight: "16px solid  var(--clr-primary)",
+            }}
+            iconStyle={{
+              border: ` 3px solid var(--clr-primary)`,
+              backgroundColor: `var(--clr-bg)`,
+              color: `var(--clr-primary)`,
+            }}
+            icon={<SchoolIcon />}
+          >
+            <h3
+              className="vertical-timeline-element-title"
+              data-aos="fade-right"
+            >
+              Full Stack Development
             </h3>
             <h4
               className="vertical-timeline-element-subtitle"
@@ -63,7 +169,6 @@ export const Timeline = () => {
             >
               Masai School (Remote)
             </h4>
-            <br />
             <p data-aos="fade-right">
               Military Styled Coding School, Where i learned about Full-Stack Web Developement, DS & Algorithms and Other Soft-Skills
             </p>
@@ -102,7 +207,7 @@ export const Timeline = () => {
                Oxford College Of Engineering & Management , Bhubaneswar
             </h4>
             <p data-aos="fade-right">
-            Pursuing B.TECH Final Year
+            CSE (2019-2023)
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -129,7 +234,7 @@ export const Timeline = () => {
               className="vertical-timeline-element-title"
               data-aos="fade-right"
             >
-              Completed HS - Science
+              Higher Secondary - Science (PCMIT)
             </h3>
             <br />
             <h4
@@ -139,7 +244,7 @@ export const Timeline = () => {
               Godavarish Higher Secondary School , Banpur
             </h4>
             <p data-aos="fade-right">
-              Passed with 66.57 Percentage.
+              Passed with 67 Percentage.
             </p>
           </VerticalTimelineElement>
 
