@@ -24,16 +24,10 @@ export const Introduction = () => {
                 <span className="different">Ranjan Palai </span> and I am from{" "}
                 <span className="different">
                   {" "}
-                  Khordha , Odisha (India)
+                  Khordha , Odisha (India) . &nbsp; 
                 </span>
-                . Currently I am pursuing my graduation  (B.TECH)
-                from{" "}
-                <span className="different">
-                Oxford College Of Engineering & Management (OCEM) , BBSR 
-                 </span>
-                 . Now I have enrolled in a full-time full stack web development course by{" "}
-                <span className="different">Masai School</span>  a military type
-                coding school..
+                
+ I am a <span className="different">B.Tech</span> graduate in <span className="different">Computer Science and Engineering</span> with strong proficiency in web and mobile application development, specializing in <span className="different">React.js</span>,<span className="different">Next.Js</span> ,<span className="different"> TypeScript</span>, and <span className="different">Node.js</span>, along with experience in building <span className="different">Android and iOS</span> applications using <span className="different">React Native and Swift</span>. I excel in delivering scalable solutions while collaborating effectively within cross-functional teams. My commitment to continuous learning and my collaborative nature make me a valuable asset in dynamic development environments.
               </h4>
               <h4>Terms That can describe me apart form Coding :</h4>
               <h4 className="different">

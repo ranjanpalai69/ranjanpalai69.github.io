@@ -32,7 +32,7 @@ export const Timeline = () => {
         <VerticalTimeline lineColor={linecolor}>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date={"Aug 2019 - Jul 2023"}
+            date={"Oct 2024 - Present"}
             contentStyle={{
               boxShadow: `var(--shadow)`,
               border: "3px solid var(--clr-primary)",
@@ -63,12 +63,12 @@ export const Timeline = () => {
                Rampwin Technologies Pvt Ltd , Jaipur , Rajasthan
             </h4>
             <p data-aos="fade-right">
-            Oct 2024 - Present
+            I contributed to enhancing their existing chat commerce application chat system—by developing a comprehensive coupon management module, enabling seamless integration of promotional offers within the platform. My role also involved identifying and resolving critical bugs, ensuring system stability and optimal performance, and collaborating with stakeholders to refine feature implementations.
             </p>
           </VerticalTimelineElement>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date={"Aug 2019 - Jul 2023"}
+            date={"Nov 2023 - Oct 2024"}
             contentStyle={{
               boxShadow: `var(--shadow)`,
               border: "3px solid var(--clr-primary)",
@@ -99,12 +99,12 @@ export const Timeline = () => {
                Venturesathi Business Services LLP , Rourkela , Odisha
             </h4>
             <p data-aos="fade-right">
-            Nov 2023 - Oct 2024
+            I was responsible for developing and optimizing web applications, collaborating with cross-functional teams, and ensuring seamless project execution. I actively engaged with clients to gather requirements, analyze business objectives, and translate them into scalable technical solutions. Working within an Agile environment, I contributed to sprint planning, daily stand-ups, and iterative deliveries to ensure alignment with business goals. My key contributions include the development of a comprehensive ERP & HRMS system that streamlined business operations by automating purchasing, sales, and invoicing while integrating accounting functionalities with Tally. This solution enhanced operational efficiency, reduced paperwork by 70%, and improved user experience by 40%. I also developed an end-to-end HRMS module, automating recruitment, payroll, and attendance processes with role-based views, reducing HR workload by 80%.
             </p>
           </VerticalTimelineElement>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date={"Aug 2019 - Jul 2023"}
+            date={"Aug 2022 - Aug 2023"}
             contentStyle={{
               boxShadow: `var(--shadow)`,
               border: "3px solid var(--clr-primary)",
@@ -135,7 +135,7 @@ export const Timeline = () => {
                ezTruck , Bhubaneswar , Odisha
             </h4>
             <p data-aos="fade-right">
-            Aug 20222 - Aug 2023
+            Worked closely with backend and design teams to develop an internal employee management dashboard and a real-time chat application. I participated in requirements analysis, UI development, and feature implementation, enhancing my skills in React.js, Redux, and MongoDB while gaining hands-on experience in Agile methodologies and collaborative development environments.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
