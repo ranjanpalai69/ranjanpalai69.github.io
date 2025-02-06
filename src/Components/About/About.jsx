@@ -12,6 +12,7 @@ import { Techstacks } from "./Techstacks";
 import SocialLinks from "./SocialLinks";
 import resume from "../../assets/Ranjan-Palai-Resume.pdf"
 import Me from "../../assets/Yep.jpeg";
+import { Instagram as InstagramIcon } from '@material-ui/icons';
 export const openNew=()=>{
   window.open("https://drive.google.com/file/d/19ZZO9lSOfHjEek31QVbsEDOIEq6sUep7/view?usp=sharing");
 }
@@ -73,6 +74,15 @@ export const About = () => {
             rel="noreferrer"
           >
             <TwitterIcon />
+          </a>
+          <a
+            href="https://www.instagram.com/ranjan_palai19/"
+            aria-label="instagram"
+            className="link link--icon"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <InstagramIcon/>
           </a>
         </div>
 
