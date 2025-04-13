@@ -89,7 +89,7 @@ export const About = () => {
               <InstagramIcon />
             </a>
             <a
-              href="https://wa.me/918144630220?text=Hii"
+              href="https://wa.me/918144630220?text=Hii Ranjan%0AHow are you doing 😊"
               aria-label="whatsapp"
               className="link link--icon"
               target="_blank"
