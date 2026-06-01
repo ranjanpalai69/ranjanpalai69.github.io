@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9559fcf2.css",
-    "main.js": "/static/js/main.d540486a.js",
+    "main.css": "/static/css/main.3cd4db9b.css",
+    "main.js": "/static/js/main.d8507a50.js",
     "static/media/GFF-Tech.mp4": "/static/media/GFF-Tech.59e19e358e2ab8800267.mp4",
     "static/media/Lexibit.mp4": "/static/media/Lexibit.f299cef0b407c3d74861.mp4",
     "static/media/loading.gif": "/static/media/loading.44303f7f50f4f1946a3e.gif",
@@ -10,11 +10,11 @@
     "static/media/Ranjan-Palai.jpeg": "/static/media/Ranjan-Palai.b8155719de19dbcbdf55.jpeg",
     "static/media/Ranjan-Palai-Resume.pdf": "/static/media/Ranjan-Palai-Resume.7f523dffcd45f8d494cb.pdf",
     "index.html": "/index.html",
-    "main.9559fcf2.css.map": "/static/css/main.9559fcf2.css.map",
-    "main.d540486a.js.map": "/static/js/main.d540486a.js.map"
+    "main.3cd4db9b.css.map": "/static/css/main.3cd4db9b.css.map",
+    "main.d8507a50.js.map": "/static/js/main.d8507a50.js.map"
   },
   "entrypoints": [
-    "static/css/main.9559fcf2.css",
-    "static/js/main.d540486a.js"
+    "static/css/main.3cd4db9b.css",
+    "static/js/main.d8507a50.js"
   ]
 }
