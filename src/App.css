@@ -144,6 +144,8 @@ main {
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
+  max-width: calc(100vw - 2rem);
+  word-break: break-word;
 }
 
 /* Animated underline on section titles */
@@ -298,4 +300,19 @@ main {
 
 @media (max-width: 640px) {
   .section { margin-top: 2.5em; }
+
+  /* Prevent section headings from overflowing the viewport on small screens */
+  .section__title {
+    display: block;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .section__title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

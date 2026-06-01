@@ -34,7 +34,7 @@ export const Navbar = () => {
             { label: "Home", id: "top" },
             { label: "About", id: "about" },
             { label: "Skills", id: "skills" },
-            { label: "Work", id: "work-projects" },
+            { label: "Client Work", id: "work-projects" },
             { label: "Projects", id: "projects" },
             { label: "Contact", id: "contact" },
           ].map(({ label, id }) => (
