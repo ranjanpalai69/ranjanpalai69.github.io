@@ -5,7 +5,6 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
-import TwitterIcon from "@material-ui/icons/Twitter";
 import { Introduction } from "./Introduction";
 import { Timeline } from "./Timeline";
 import { Techstacks } from "./Techstacks";
@@ -70,13 +69,12 @@ export const About = () => {
 
           <div className="hero__social" data-aos="fade-right" data-aos-delay="360">
             {[
-              { href: "https://github.com/ranjanpalai69",         label: "GitHub",    icon: <GitHubIcon />,    cls: "gh"       },
-              { href: "https://www.linkedin.com/in/ranjan-palai19/", label: "LinkedIn", icon: <LinkedInIcon />, cls: "li"       },
-              { href: "mailto:palairanjan2002@gmail.com",         label: "Email",     icon: <EmailIcon />,    cls: "email"    },
-              { href: "tel:+918144630220",                         label: "Call",      icon: <PhoneIcon />,    cls: "phone"    },
-              { href: "https://wa.me/918144630220?text=Hi Ranjan, I came across your portfolio!", label: "WhatsApp", icon: <WhatsApp />, cls: "wa" },
-              { href: "https://twitter.com/RANJANPALAI141",        label: "Twitter",   icon: <TwitterIcon />,  cls: "tw"       },
-              { href: "https://www.instagram.com/ranjan_palai19/", label: "Instagram", icon: <InstagramIcon />, cls: "ig"      },
+              { href: "https://github.com/ranjanpalai69",                                          label: "GitHub",    icon: <GitHubIcon />,    cls: "gh"    },
+              { href: "https://www.linkedin.com/in/ranjan-palai19/",                              label: "LinkedIn",  icon: <LinkedInIcon />,  cls: "li"    },
+              { href: "mailto:palairanjan2002@gmail.com",                                          label: "Email",     icon: <EmailIcon />,     cls: "email" },
+              { href: "tel:+918144630220",                                                         label: "Call",      icon: <PhoneIcon />,     cls: "phone" },
+              { href: "https://wa.me/918144630220?text=Hi Ranjan, I came across your portfolio!", label: "WhatsApp",  icon: <WhatsApp />,      cls: "wa"    },
+              { href: "https://www.instagram.com/ranjan_palai19/",                                label: "Instagram", icon: <InstagramIcon />, cls: "ig"    },
             ].map(({ href, label, icon, cls }, i) => (
               <a
                 key={cls}
@@ -86,7 +84,7 @@ export const About = () => {
                 rel="noreferrer"
                 className={`hero__social-link hero__social-link--${cls}`}
                 data-tooltip={label}
-                style={{ animationDelay: `${i * 60}ms` }}
+                style={{ animationDelay: `${i * 55}ms` }}
               >
                 {icon}
               </a>
