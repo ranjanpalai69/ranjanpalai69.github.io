@@ -6,6 +6,7 @@ import { About } from "./Components/About/About";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Github } from "./Components/About/Github";
+import { WorkProjects } from "./Components/WorkProjects/WorkProjects";
 import { Projects } from "./Components/Projects/Projects";
 import { Footer } from "./Components/Footer/Footer";
 import { ScrollToTop } from "./Components/ScrollToTop/ScrollToTop";
@@ -32,6 +33,9 @@ export default function App() {
         <About />
         <Github />
         <Stat/>
+        <section id="work-projects">
+          <WorkProjects />
+        </section>
         <section id="#projects">
           <Projects />
         </section>
@@ -41,7 +45,7 @@ export default function App() {
       </main>
       <Footer />
       <ScrollToTop />
-      
+
         </div>
      }
     </div>

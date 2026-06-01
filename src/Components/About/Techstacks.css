@@ -1,75 +1,118 @@
 .main {
   margin-top: 4em;
 }
+
 .techsection {
   width: 100%;
   text-align: center;
-  background-color: var(--clr-bg);
-  height: 70vh;
-  /* max-height: 400px; */
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 1rem 0 2rem;
 }
 
+/* Staggered entrance — 1 to 24 */
+.techsection > div:nth-child(1)  { animation-delay: 0.00s; }
+.techsection > div:nth-child(2)  { animation-delay: 0.05s; }
+.techsection > div:nth-child(3)  { animation-delay: 0.10s; }
+.techsection > div:nth-child(4)  { animation-delay: 0.15s; }
+.techsection > div:nth-child(5)  { animation-delay: 0.20s; }
+.techsection > div:nth-child(6)  { animation-delay: 0.25s; }
+.techsection > div:nth-child(7)  { animation-delay: 0.30s; }
+.techsection > div:nth-child(8)  { animation-delay: 0.35s; }
+.techsection > div:nth-child(9)  { animation-delay: 0.40s; }
+.techsection > div:nth-child(10) { animation-delay: 0.45s; }
+.techsection > div:nth-child(11) { animation-delay: 0.50s; }
+.techsection > div:nth-child(12) { animation-delay: 0.55s; }
+.techsection > div:nth-child(13) { animation-delay: 0.60s; }
+.techsection > div:nth-child(14) { animation-delay: 0.65s; }
+.techsection > div:nth-child(15) { animation-delay: 0.70s; }
+.techsection > div:nth-child(16) { animation-delay: 0.75s; }
+.techsection > div:nth-child(17) { animation-delay: 0.80s; }
+.techsection > div:nth-child(18) { animation-delay: 0.85s; }
+.techsection > div:nth-child(19) { animation-delay: 0.90s; }
+.techsection > div:nth-child(20) { animation-delay: 0.95s; }
+.techsection > div:nth-child(21) { animation-delay: 1.00s; }
+.techsection > div:nth-child(22) { animation-delay: 1.05s; }
+.techsection > div:nth-child(23) { animation-delay: 1.10s; }
+.techsection > div:nth-child(24) { animation-delay: 1.15s; }
+
 .techsection > div {
-  width: 11%;
-  height: 16vh;
-  max-height: 140px;
+  width: 110px;
+  height: 110px;
   box-shadow: var(--shadow);
-  z-index: 1;
   border-radius: 20px;
-  margin: 2.5%;
-  float: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease 0s;
+  gap: 6px;
   border: 2px solid var(--clr-primary);
+  background: var(--clr-bg);
+  cursor: default;
+  /* Floating animation */
+  animation: skill-float 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+@keyframes skill-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
 .techsection > div:hover {
-  background-color: var(--clr-bg);
-  overflow: hidden;
-  transform: scale(1.08);
-  box-shadow: rgba(0, 0, 0, 0.36) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  border: 1px solid var(--clr-primary);
+  transform: translateY(-10px) scale(1.1) !important;
+  box-shadow: 0 12px 32px rgba(var(--clr-primary-rgb, 15, 183, 195), 0.35),
+    var(--shadow);
+  border-color: var(--clr-accent, #a855f7);
+  animation: none;
 }
 
 .techsection > div > svg {
-  /* height: 50%;
-  width: 50%; */
-  font-size: 8vh;
+  font-size: 2.6rem;
   color: var(--clr-primary);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
+
+.techsection > div:hover > svg {
+  color: var(--clr-accent, #a855f7);
+  transform: scale(1.15);
+}
+
 .techsection > div > h5 {
-  position: relative;
-  top: 8px;
-  background-color: transparent;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: transparent;
+  margin: 0;
+  color: var(--clr-fg);
+  letter-spacing: 0.02em;
 }
 
+/* ---- Responsive ---- */
 @media (max-width: 1024px) {
-  .techsection {
-    height: 220vh;
-  }
   .techsection > div {
-    width: 40%;
-    margin-right: 5%;
-    margin-bottom: 2%;
-    height: 18vh;
-    font-size:14px ;
+    width: 90px;
+    height: 90px;
+  }
+
+  .techsection > div > svg {
+    font-size: 2rem;
   }
 }
-
 
 @media (max-width: 640px) {
-  .techsection {
-    height: 200vh;
-  }
   .techsection > div {
-    width: 40%;
-    margin-right: 5%;
-    margin-bottom: 2%;
-    height: 18vh;
-    font-size:10px ;
+    width: 78px;
+    height: 78px;
+  }
 
+  .techsection > div > svg {
+    font-size: 1.7rem;
+  }
+
+  .techsection > div > h5 {
+    font-size: 0.62rem;
   }
 }

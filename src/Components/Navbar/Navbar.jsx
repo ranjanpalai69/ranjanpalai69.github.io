@@ -6,87 +6,65 @@ import WbSunnyRoundedIcon from "@material-ui/icons/WbSunnyRounded";
 import resume from "../../assets/Ranjan-Palai-Resume.pdf";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+
 export const Navbar = () => {
   const [{ themename, toggeltheme }] = React.useContext(ThemeContext);
   const [showNavList, setShowNavList] = React.useState(false);
 
-  const toggleNavList = (id) => {
-    var element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView();
-    }
-    setShowNavList(!showNavList);
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setShowNavList(false);
   };
 
-  const openNew=()=>{
-    window.open("https://drive.google.com/file/d/19ZZO9lSOfHjEek31QVbsEDOIEq6sUep7/view?usp=sharing");
-  }
+  const openResume = () => {
+    window.open(
+      "https://drive.google.com/file/d/19ZZO9lSOfHjEek31QVbsEDOIEq6sUep7/view?usp=sharing"
+    );
+  };
 
   return (
     <>
       <nav className="center nav">
         <ul
           style={{ display: showNavList ? "flex" : null }}
-          className="nav__list"
+          className={`nav__list ${showNavList ? "nav__list--open" : ""}`}
         >
-          <li className="nav__list-item">
-            <a
-              href="#home"
-              onClick={() => toggleNavList("#home")}
-              className="link link--nav"
-            >
-              Home
-            </a>
-          </li>
-          <li className="nav__list-item">
-            <a
-              href="#about"
-              onClick={() => toggleNavList("#about")}
-              className="link link--nav"
-            >
-              About
-            </a>
-          </li>
-          <li className="nav__list-item">
-            <a
-              href="#skills"
-              onClick={() => toggleNavList("#skills")}
-              className="link link--nav"
-            >
-              Skills
-            </a>
-          </li>
-          <li className="nav__list-item">
-            <a
-              href="#projects"
-              onClick={() => toggleNavList("#projects")}
-              className="link link--nav"
-            >
-              Projects
-            </a>
-          </li>
-          <li className="nav__list-item">
-            <a
-              href="#contact"
-              onClick={() => toggleNavList("#contact")}
-              className="link link--nav"
-            >
-              Contact
-            </a>
-          </li>
+          {[
+            { label: "Home", id: "top" },
+            { label: "About", id: "about" },
+            { label: "Skills", id: "skills" },
+            { label: "Work", id: "work-projects" },
+            { label: "Projects", id: "projects" },
+            { label: "Contact", id: "contact" },
+          ].map(({ label, id }) => (
+            <li className="nav__list-item" key={id}>
+              <a
+                href={`#${id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo(id);
+                }}
+                className="link link--nav"
+              >
+                {label}
+              </a>
+            </li>
+          ))}
           <li className="nav__list-item">
             <a
               href={resume}
-              onClick={openNew}
-              className="link link--nav"
+              onClick={openResume}
+              className="link link--nav nav__resume-link"
               target="_blank"
-              download={true}
-              
+              rel="noreferrer"
+              download
             >
               Resume
             </a>
           </li>
         </ul>
+
         <button
           type="button"
           onClick={toggeltheme}
@@ -96,14 +74,14 @@ export const Navbar = () => {
         >
           {themename === "dark" ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
         </button>
+
         <button
           type="button"
-          onClick={toggleNavList}
+          onClick={() => setShowNavList((v) => !v)}
           className="btn btn--icon nav__hamburger"
           aria-label="toggle navigation"
         >
           {showNavList ? <CloseIcon /> : <MenuIcon />}
-          
         </button>
       </nav>
     </>

@@ -1,0 +1,232 @@
+.work-projects-section {
+  padding: 4rem 0 2rem;
+}
+
+.work-projects-section .section__title {
+  margin-bottom: 0.5rem;
+}
+
+.work-projects-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent, #a855f7));
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  animation: badge-pulse 3s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(var(--clr-primary-rgb, 15, 183, 195), 0.3); }
+  50%       { box-shadow: 0 0 12px 4px rgba(var(--clr-primary-rgb, 15, 183, 195), 0.2); }
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ---- Card ---- */
+.work-card {
+  background-color: var(--clr-bg);
+  border: 2px solid var(--clr-primary);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  animation: border-dance 6s ease-in-out infinite;
+}
+
+@keyframes border-dance {
+  0%, 100% { border-color: var(--clr-primary); }
+  50%       { border-color: var(--clr-accent, #a855f7); }
+}
+
+.work-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(var(--clr-primary-rgb, 15, 183, 195), 0.25),
+    var(--shadow);
+  animation: none;
+  border-color: var(--clr-primary);
+}
+
+/* ---- Media container ---- */
+.work-card__media {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: #000;
+  overflow: hidden;
+}
+
+.work-card__media img,
+.work-card__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid var(--clr-primary);
+  transition: transform 0.5s ease;
+}
+
+.work-card:hover .work-card__media img,
+.work-card:hover .work-card__media video {
+  transform: scale(1.04);
+}
+
+/* Shimmer overlay on hover */
+.work-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.work-card:hover .work-card__media::after {
+  opacity: 1;
+  animation: shimmer-sweep 1s ease forwards;
+}
+
+@keyframes shimmer-sweep {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+.work-card__company-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--clr-primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--clr-primary);
+  backdrop-filter: blur(4px);
+  animation: tag-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes tag-glow {
+  from { box-shadow: 0 0 0 rgba(var(--clr-primary-rgb, 15, 183, 195), 0); }
+  to   { box-shadow: 0 0 8px rgba(var(--clr-primary-rgb, 15, 183, 195), 0.5); }
+}
+
+/* ---- Body ---- */
+.work-card__body {
+  padding: 1.4rem 1.6rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.work-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: 0.55rem;
+  transition: color 0.2s;
+}
+
+.work-card:hover .work-card__title {
+  color: var(--clr-accent, #a855f7);
+}
+
+.work-card__desc {
+  font-size: 0.87rem;
+  color: var(--clr-fg);
+  line-height: 1.68;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.work-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1.1rem;
+}
+
+.work-card__tech span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  border: 1.5px solid var(--clr-primary);
+  border-radius: 20px;
+  padding: 3px 10px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.work-card__tech span:hover {
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+  transform: scale(1.05);
+}
+
+.work-card__actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Same style as .btns in Projects.css — direct transition, no pseudo trick */
+.work-card__actions a {
+  text-decoration: none;
+}
+
+.work-btn {
+  display: inline-block;
+  color: var(--clr-primary);
+  background: transparent;
+  border: 2px solid var(--clr-primary);
+  border-radius: 6px;
+  padding: 9px 20px;
+  font-size: 0.83rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease,
+    box-shadow 0.22s ease;
+  white-space: nowrap;
+}
+
+.work-btn:hover {
+  background: var(--clr-primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(var(--clr-primary-rgb, 15, 183, 195), 0.35);
+}
+
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+  .work-card__media { height: 200px; }
+}
+
+@media (max-width: 600px) {
+  .work-card__media { height: 180px; }
+  .work-card__body { padding: 1rem 1.1rem 1.2rem; }
+}

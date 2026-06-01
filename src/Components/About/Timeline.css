@@ -9,11 +9,65 @@
 .vertical-timeline-element-subtitle {
   margin-top: 0.5em;
   font-size: 0.9em;
+  color: var(--clr-fg);
+  opacity: 0.85;
 }
 
 .vertical-timeline-element-title {
   font-size: 1.1em;
   color: var(--clr-primary);
+  background: linear-gradient(270deg, var(--clr-primary), var(--clr-accent, #a855f7), var(--clr-primary));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
 }
 
+/* Pulse animation on the timeline icon dots */
+.vertical-timeline-element-icon {
+  animation: icon-pulse 3s ease-in-out infinite;
+}
 
+@keyframes icon-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(15, 183, 195, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(15, 183, 195, 0);
+  }
+}
+
+/* Card hover lift */
+.vertical-timeline-element-content {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 30px rgba(var(--clr-primary-rgb, 15, 183, 195), 0.2) !important;
+}
+
+/* Subtle shimmer on the timeline line */
+.vertical-timeline::before {
+  background: linear-gradient(
+    180deg,
+    var(--clr-primary),
+    var(--clr-accent, #a855f7),
+    var(--clr-primary)
+  ) !important;
+  background-size: 100% 300% !important;
+  animation: timeline-line-shift 5s ease infinite !important;
+}
+
+@keyframes timeline-line-shift {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

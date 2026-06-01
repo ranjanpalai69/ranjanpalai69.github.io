@@ -32,7 +32,43 @@ export const Timeline = () => {
         <VerticalTimeline lineColor={linecolor}>
         <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date={"Oct 2024 - Present"}
+            date={"Mar 2025 – Present"}
+            contentStyle={{
+              boxShadow: `var(--shadow)`,
+              border: "3px solid var(--clr-primary)",
+              backgroundColor: `var(--clr-bg)`,
+              textAlign: "center",
+              color: `var(--clr-fg-alt)`,
+            }}
+            contentArrowStyle={{
+              borderRight: "16px solid  var(--clr-primary)",
+            }}
+            iconStyle={{
+              border: ` 3px solid var(--clr-primary)`,
+              backgroundColor: `var(--clr-bg)`,
+              color: `var(--clr-primary)`,
+            }}
+            icon={<SchoolIcon />}
+          >
+            <h3
+              className="vertical-timeline-element-title"
+              data-aos="fade-right"
+            >
+              Full-Stack Developer
+            </h3>
+            <h4
+              className="vertical-timeline-element-subtitle"
+              data-aos="fade-right"
+            >
+              Splitbit Innovative Solutions LLP, Hyderabad
+            </h4>
+            <p data-aos="fade-right">
+              Led development of Lexibit — a full-scale AI-powered OCR automation platform (Next.js 15 PWA) integrating Zoho Books, Google Sheets, QuickBooks via OAuth 2.0, with a GPT-4o-mini chat layer for natural-language workflow control. Architected the Noedra design system (49+ Web Components) for Siemens Energy using Lit 3, TypeScript, and Storybook 8. Contributed to Global Fintech Fest 2025 via Strapi CMS and built a distributed SEO crawler on AWS Lambda with real-time Socket.IO streaming.
+            </p>
+          </VerticalTimelineElement>
+        <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={"Oct 2024 – Mar 2025"}
             contentStyle={{
               boxShadow: `var(--shadow)`,
               border: "3px solid var(--clr-primary)",
@@ -60,10 +96,10 @@ export const Timeline = () => {
               className="vertical-timeline-element-subtitle"
               data-aos="fade-right"
             >
-               Rampwin Technologies Pvt Ltd , Jaipur , Rajasthan
+               Rampwin Technologies Pvt Ltd, Jaipur, Rajasthan
             </h4>
             <p data-aos="fade-right">
-            I contributed to enhancing their existing chat commerce application chat system—by developing a comprehensive coupon management module, enabling seamless integration of promotional offers within the platform. My role also involved identifying and resolving critical bugs, ensuring system stability and optimal performance, and collaborating with stakeholders to refine feature implementations.
+              Enhanced a chat commerce platform by developing a coupon management module and integrating Salesforce APIs (OAuth, lead automation, triggered messaging). Resolved critical bugs to ensure system stability and collaborated with stakeholders on high-quality feature delivery.
             </p>
           </VerticalTimelineElement>
         <VerticalTimelineElement

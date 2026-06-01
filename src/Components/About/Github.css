@@ -1,0 +1,44 @@
+.github-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.github-note {
+  font-size: 0.92rem;
+  color: var(--clr-fg);
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}
+
+.github-calendar-wrapper {
+  background: var(--clr-bg);
+  border: 2px solid var(--clr-primary);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+  max-width: 100%;
+  transition: box-shadow 0.3s ease;
+  animation: glow-border 4s ease-in-out infinite alternate;
+}
+
+.github-calendar-wrapper:hover {
+  box-shadow: 0 0 24px rgba(15, 183, 195, 0.3), var(--shadow);
+}
+
+@keyframes glow-border {
+  0% {
+    box-shadow: 0 0 6px rgba(15, 183, 195, 0.15), var(--shadow);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(15, 183, 195, 0.3), var(--shadow);
+  }
+}
+
+@media (max-width: 768px) {
+  .github-calendar-wrapper {
+    padding: 1.2rem 1rem;
+  }
+}
