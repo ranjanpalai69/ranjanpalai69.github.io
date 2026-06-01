@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.608ad1f4.css",
-    "main.js": "/static/js/main.f011e277.js",
+    "main.css": "/static/css/main.0a65dac3.css",
+    "main.js": "/static/js/main.3576f6e4.js",
+    "static/media/GFF-Tech.mp4": "/static/media/GFF-Tech.59e19e358e2ab8800267.mp4",
+    "static/media/Lexibit.mp4": "/static/media/Lexibit.f299cef0b407c3d74861.mp4",
     "static/media/loading.gif": "/static/media/loading.44303f7f50f4f1946a3e.gif",
-    "static/media/Yep.jpeg": "/static/media/Yep.b8155719de19dbcbdf55.jpeg",
-    "static/media/Ranjan-Palai-Resume.pdf": "/static/media/Ranjan-Palai-Resume.7c5341481d3a7d559f46.pdf",
+    "static/media/SE-Web-componets.png": "/static/media/SE-Web-componets.4349830636a6e8c11383.png",
+    "static/media/Crawler.png": "/static/media/Crawler.0dcf803651e85585cff7.png",
+    "static/media/Ranjan-Palai.jpeg": "/static/media/Ranjan-Palai.b8155719de19dbcbdf55.jpeg",
+    "static/media/Ranjan-Palai-Resume.pdf": "/static/media/Ranjan-Palai-Resume.7f523dffcd45f8d494cb.pdf",
     "index.html": "/index.html",
-    "main.608ad1f4.css.map": "/static/css/main.608ad1f4.css.map",
-    "main.f011e277.js.map": "/static/js/main.f011e277.js.map"
+    "main.0a65dac3.css.map": "/static/css/main.0a65dac3.css.map",
+    "main.3576f6e4.js.map": "/static/js/main.3576f6e4.js.map"
   },
   "entrypoints": [
-    "static/css/main.608ad1f4.css",
-    "static/js/main.f011e277.js"
+    "static/css/main.0a65dac3.css",
+    "static/js/main.3576f6e4.js"
   ]
 }
