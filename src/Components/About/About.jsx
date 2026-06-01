@@ -4,6 +4,7 @@ import { Type } from "./Type";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
+import PhoneIcon from "@material-ui/icons/Phone";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import { Introduction } from "./Introduction";
 import { Timeline } from "./Timeline";
@@ -68,24 +69,28 @@ export const About = () => {
           </p>
 
           <div className="hero__social" data-aos="fade-right" data-aos-delay="360">
-            <a href="https://github.com/ranjanpalai69" aria-label="GitHub" target="_blank" rel="noreferrer" className="hero__social-link">
-              <GitHubIcon />
-            </a>
-            <a href="https://www.linkedin.com/in/ranjan-palai19/" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="hero__social-link">
-              <LinkedInIcon />
-            </a>
-            <a href="mailto:palairanjan2002@gmail.com" aria-label="Email" target="_blank" rel="noreferrer" className="hero__social-link">
-              <EmailIcon />
-            </a>
-            <a href="https://twitter.com/RANJANPALAI141" aria-label="Twitter" target="_blank" rel="noreferrer" className="hero__social-link">
-              <TwitterIcon />
-            </a>
-            <a href="https://www.instagram.com/ranjan_palai19/" aria-label="Instagram" target="_blank" rel="noreferrer" className="hero__social-link">
-              <InstagramIcon />
-            </a>
-            <a href="https://wa.me/918144630220?text=Hi Ranjan, I came across your portfolio!" aria-label="WhatsApp" target="_blank" rel="noreferrer" className="hero__social-link">
-              <WhatsApp />
-            </a>
+            {[
+              { href: "https://github.com/ranjanpalai69",         label: "GitHub",    icon: <GitHubIcon />,    cls: "gh"       },
+              { href: "https://www.linkedin.com/in/ranjan-palai19/", label: "LinkedIn", icon: <LinkedInIcon />, cls: "li"       },
+              { href: "mailto:palairanjan2002@gmail.com",         label: "Email",     icon: <EmailIcon />,    cls: "email"    },
+              { href: "tel:+918144630220",                         label: "Call",      icon: <PhoneIcon />,    cls: "phone"    },
+              { href: "https://wa.me/918144630220?text=Hi Ranjan, I came across your portfolio!", label: "WhatsApp", icon: <WhatsApp />, cls: "wa" },
+              { href: "https://twitter.com/RANJANPALAI141",        label: "Twitter",   icon: <TwitterIcon />,  cls: "tw"       },
+              { href: "https://www.instagram.com/ranjan_palai19/", label: "Instagram", icon: <InstagramIcon />, cls: "ig"      },
+            ].map(({ href, label, icon, cls }, i) => (
+              <a
+                key={cls}
+                href={href}
+                aria-label={label}
+                target={href.startsWith("tel") ? "_self" : "_blank"}
+                rel="noreferrer"
+                className={`hero__social-link hero__social-link--${cls}`}
+                data-tooltip={label}
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                {icon}
+              </a>
+            ))}
           </div>
 
           <div className="hero__actions" data-aos="fade-right" data-aos-delay="420">
