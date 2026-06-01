@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.55535723.css",
-    "main.js": "/static/js/main.95a75837.js",
+    "main.css": "/static/css/main.ce9bc26d.css",
+    "main.js": "/static/js/main.5554c65b.js",
     "static/media/GFF-Tech.mp4": "/static/media/GFF-Tech.59e19e358e2ab8800267.mp4",
     "static/media/Lexibit.mp4": "/static/media/Lexibit.f299cef0b407c3d74861.mp4",
     "static/media/loading.gif": "/static/media/loading.44303f7f50f4f1946a3e.gif",
@@ -10,11 +10,11 @@
     "static/media/Ranjan-Palai.jpeg": "/static/media/Ranjan-Palai.b8155719de19dbcbdf55.jpeg",
     "static/media/Ranjan-Palai-Resume.pdf": "/static/media/Ranjan-Palai-Resume.7f523dffcd45f8d494cb.pdf",
     "index.html": "/index.html",
-    "main.55535723.css.map": "/static/css/main.55535723.css.map",
-    "main.95a75837.js.map": "/static/js/main.95a75837.js.map"
+    "main.ce9bc26d.css.map": "/static/css/main.ce9bc26d.css.map",
+    "main.5554c65b.js.map": "/static/js/main.5554c65b.js.map"
   },
   "entrypoints": [
-    "static/css/main.55535723.css",
-    "static/js/main.95a75837.js"
+    "static/css/main.ce9bc26d.css",
+    "static/js/main.5554c65b.js"
   ]
 }
