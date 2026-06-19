@@ -2,6 +2,8 @@
   width: 80%;
   margin: 0 auto;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
 }
 
 .project {
@@ -12,6 +14,7 @@
   border-radius: 20px;
   border: 2px solid var(--clr-primary);
   flex-direction: column;
+  height: 100%;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   overflow: hidden;
   position: relative;
@@ -79,6 +82,7 @@
   padding: 1.2rem 1.4rem 1.6rem;
   overflow-y: auto;
   overflow-x: hidden;
+  flex: 1;
 }
 
 .project_information > h2 {
@@ -98,32 +102,39 @@
   font-size: 0.87rem;
   line-height: 1.65;
   color: var(--clr-fg);
+  flex: 1;
 }
 
-/* Tech icons row */
-.project_information > div:nth-child(3) {
-  margin-top: 0.8em;
+/* Tech chips */
+.project__chips {
+  margin-top: 0.9em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 6px;
 }
 
-.project_information > div:nth-child(3) > * {
-  font-size: 1.7rem;
-  margin: 4px 5px;
+.project__chip {
+  font-size: 0.7rem;
+  font-weight: 600;
   color: var(--clr-primary);
-  transition: color 0.2s ease, transform 0.2s ease;
+  border: 1.5px solid var(--clr-primary);
+  border-radius: 20px;
+  padding: 3px 10px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.project_information > div:nth-child(3) > *:hover {
-  color: var(--clr-accent, #a855f7);
-  transform: scale(1.25) rotate(5deg);
+.project__chip:hover {
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+  transform: scale(1.05);
 }
 
 /* Buttons row */
-.project_information > div:nth-child(4) {
-  margin-top: 0.8em;
+.project__actions {
+  margin-top: 0.9em;
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
@@ -178,6 +189,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  align-items: stretch;
 }
 
 @media (max-width: 800px) {
