@@ -1,24 +1,73 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Projects.css";
-import { FaReact, FaHtml5, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
-  SiChakraui,
-  SiMaterialui,
   SiExpress,
-  SiTailwindcss,
-  SiJavascript,
   SiMongodb,
-  SiNodedotjs,
   SiRedux,
-  SiCss3,
-  SiBootstrap,
   SiTypescript,
   SiJsonwebtokens,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiThreedotjs,
+  SiSocketdotio,
+  SiPostgresql,
+  SiFramer,
 } from "react-icons/si";
-import { DiCss3, DiFirebase, DiHtml5 } from "react-icons/di";
-import { IoLogoJavascript } from "react-icons/io";
+import { DiCss3, DiFirebase } from "react-icons/di";
+
+import GameBoard from "../../assets/snake-and-ladder/GameBoard.png";
+import LeaderBoard from "../../assets/snake-and-ladder/leader-board.png";
+import MatchHistory from "../../assets/snake-and-ladder/match-history.png";
+import Snake1 from "../../assets/snake-and-ladder/Snake1.png";
+import Snake2 from "../../assets/snake-and-ladder/Snake2.png";
+import Snake3 from "../../assets/snake-and-ladder/Snake3.png";
+import Snake4 from "../../assets/snake-and-ladder/Snake4.png";
+
+const snakeImages = [GameBoard, LeaderBoard, MatchHistory, Snake1, Snake2, Snake3, Snake4];
+
+const CyclingImage = ({ images, alt }) => {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % images.length);
+        setVisible(true);
+      }, 250);
+    }, 1500);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <img
+      src={images[index]}
+      alt={alt}
+      style={{
+        width: "100%",
+        height: "200px",
+        objectFit: "cover",
+        borderBottom: "2px solid var(--clr-primary)",
+        transition: "opacity 0.25s ease",
+        opacity: visible ? 1 : 0,
+      }}
+    />
+  );
+};
 
 const projects = [
+  {
+    id: 7,
+    title: "Snake & Ladder — Real-Time 3D Multiplayer Game",
+    images: snakeImages,
+    alt: "Snake & Ladder 3D Multiplayer Game",
+    desc: "A real-time multiplayer Snake & Ladder game with a fully interactive 3D board. Create or join rooms, invite friends with a code, and compete live with up to 6 players — rolls, moves, and turns sync instantly. Sign in with Google, chat live inside matches, earn XP, rank up, and track your full match history on a global leaderboard. Includes solo bot mode, local multiplayer, and PWA offline support with sound effects.",
+    tech: [<SiNextdotjs />, <SiTypescript />, <SiThreedotjs />, <SiSocketdotio />, <SiPostgresql />, <SiFramer />, <SiTailwindcss />],
+    live: "https://snake-and-ladder-ynq8.onrender.com/",
+    code: "https://github.com/ranjanpalai69/snake-and-ladder",
+  },
   {
     id: 5,
     title: "ShopWatch",
@@ -38,46 +87,6 @@ const projects = [
     tech: [<FaReact />, <SiRedux />, <SiTypescript />, <FaNodeJs />, <SiExpress />, <SiMongodb />, <DiFirebase />],
     live: "https://forum-lake-chi.vercel.app/",
     code: "https://github.com/Vishwa9011/Forum_App",
-  },
-  {
-    id: 1,
-    title: "Looseit.com Clone",
-    image: "https://res.cloudinary.com/jerrick/image/upload/f_jpg,fl_progressive,q_auto,w_1024/63a38636972dd4001c0d0a78.png",
-    alt: "Looseit calorie tracker",
-    desc: "A calorie counter and food diary app inspired by Lose It! — helps users stick to their diet and achieve weight loss goals by tracking daily food intake and nutrition.",
-    tech: [<FaHtml5 />, <SiCss3 />, <IoLogoJavascript />, <SiBootstrap />],
-    live: "https://coruscating-dango-4316fc.netlify.app",
-    code: "https://github.com/ranjanpalai69/looseit-clone",
-  },
-  {
-    id: 2,
-    title: "Nykaa.com Clone",
-    image: "https://vps46408.inmotionhosting.com/~forwar44/blog/wp-content/uploads/2022/02/50-off-on-nykaa-cosmatic-768x354.png",
-    alt: "Nykaa e-commerce clone",
-    desc: "Full-featured clone of India's largest beauty e-commerce platform — Nykaa. Includes product listings, filters, cart, wishlist, and a fully responsive UI.",
-    tech: [<FaReact />, <SiRedux />, <SiChakraui />, <SiMaterialui />, <DiCss3 />, <IoLogoJavascript />],
-    live: "https://63bfed597aacf001e8b9caf6--ornate-cupcake-fb26b5.netlify.app/",
-    code: "https://github.com/arpitmiahra4/amazing-pocket-7061",
-  },
-  {
-    id: 3,
-    title: "NearBuy.com Clone",
-    image: "https://moneymodels.org/wp-content/uploads/2020/08/nearbuy-homepage.png",
-    alt: "NearBuy hyper-local commerce",
-    desc: "India's first hyper-local online platform connecting customers with local merchants. Features location-based discovery, deals, and merchant profiles.",
-    tech: [<FaReact />, <SiRedux />, <SiChakraui />, <SiMaterialui />, <DiCss3 />, <DiHtml5 />, <IoLogoJavascript />],
-    live: "https://serene-rugelach-39c841.netlify.app/",
-    code: "https://github.com/debasishbihari/lame-crayon-5872",
-  },
-  {
-    id: 4,
-    title: "Weather App",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlh9HEb1mZQEJ3-czc7G0VwR8TDf8YH1TsSg&usqp=CAU",
-    alt: "Weather App",
-    desc: "A simple, clean weather lookup app built with vanilla HTML, CSS, and JavaScript — users get real-time weather data by entering any city name.",
-    tech: [<DiHtml5 />, <DiCss3 />, <IoLogoJavascript />],
-    live: "https://jolly-yeot-92ecf1.netlify.app/",
-    code: "https://github.com/ranjanpalai69/Weather-Javascript",
   },
 ];
 
@@ -101,7 +110,11 @@ export const Projects = () => {
             <div className="project">
               <div className="project_videocontainer">
                 <div>
-                  <img src={proj.image} alt={proj.alt} style={{ height: "200px" }} />
+                  {proj.images ? (
+                    <CyclingImage images={proj.images} alt={proj.alt} />
+                  ) : (
+                    <img src={proj.image} alt={proj.alt} style={{ height: "200px" }} />
+                  )}
                 </div>
               </div>
               <div className="project_information">
