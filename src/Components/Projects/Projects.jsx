@@ -11,34 +11,34 @@ import Snake4 from "../../assets/snake-and-ladder/Snake4.png";
 
 const snakeImages = [GameBoard, LeaderBoard, MatchHistory, Snake1, Snake2, Snake3, Snake4];
 
+/* Two stacked images — crossfade by toggling which slot is "active" */
 const CyclingImage = ({ images, alt }) => {
-  const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [slots, setSlots] = useState({ a: 0, b: 1, active: "a" });
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setIndex((i) => (i + 1) % images.length);
-        setVisible(true);
-      }, 250);
+      setSlots((prev) => {
+        const inactive = prev.active === "a" ? "b" : "a";
+        const nextIdx = (prev[prev.active] + 1) % images.length;
+        return { ...prev, [inactive]: nextIdx, active: inactive };
+      });
     }, 2500);
     return () => clearInterval(timer);
   }, [images.length]);
 
   return (
-    <img
-      src={images[index]}
-      alt={alt}
-      style={{
-        width: "100%",
-        height: "200px",
-        objectFit: "cover",
-        borderBottom: "2px solid var(--clr-primary)",
-        transition: "opacity 0.25s ease",
-        opacity: visible ? 1 : 0,
-      }}
-    />
+    <div className="cycling-wrap">
+      <img
+        src={images[slots.a]}
+        alt={alt}
+        className={`cycling-img ${slots.active === "a" ? "cycling-img--on" : "cycling-img--off"}`}
+      />
+      <img
+        src={images[slots.b]}
+        alt={alt}
+        className={`cycling-img ${slots.active === "b" ? "cycling-img--on" : "cycling-img--off"}`}
+      />
+    </div>
   );
 };
 
@@ -94,13 +94,11 @@ export const Projects = () => {
           >
             <div className="project">
               <div className="project_videocontainer">
-                <div>
-                  {proj.images ? (
-                    <CyclingImage images={proj.images} alt={proj.alt} />
-                  ) : (
-                    <img src={proj.image} alt={proj.alt} style={{ height: "200px" }} />
-                  )}
-                </div>
+                {proj.images ? (
+                  <CyclingImage images={proj.images} alt={proj.alt} />
+                ) : (
+                  <img src={proj.image} alt={proj.alt} />
+                )}
               </div>
               <div className="project_information">
                 <h2>{proj.title}</h2>
