@@ -9,7 +9,14 @@ import Snake2 from "../../assets/snake-and-ladder/Snake2.png";
 import Snake3 from "../../assets/snake-and-ladder/Snake3.png";
 import Snake4 from "../../assets/snake-and-ladder/Snake4.png";
 
+import Nexus1 from "../../assets/Nexus/Nexus-1.png";
+import Nexus2 from "../../assets/Nexus/Nexus-2.png";
+import Nexus3 from "../../assets/Nexus/Nexus-3.png";
+import Nexus4 from "../../assets/Nexus/Nexus-4.png";
+import Nexus5 from "../../assets/Nexus/Nexus-5.png";
+
 const snakeImages = [GameBoard, LeaderBoard, MatchHistory, Snake1, Snake2, Snake3, Snake4];
+const nexusImages = [Nexus1, Nexus2, Nexus3, Nexus4, Nexus5];
 
 /* Two stacked images — crossfade by toggling which slot is "active" */
 const CyclingImage = ({ images, alt }) => {
@@ -43,6 +50,16 @@ const CyclingImage = ({ images, alt }) => {
 };
 
 const projects = [
+  {
+    id: 8,
+    title: "Nexus — Full-Stack Social Media Platform",
+    images: nexusImages,
+    alt: "Nexus Social Media Platform",
+    desc: "A production-grade social media platform with real-time messaging, WebRTC audio/video calling, 24-hour stories, social feed with likes/comments/saves, infinite scroll, explore page, push notifications (VAPID), and PWA offline support. Features Socket.io for live messaging with typing indicators, read receipts, and presence tracking; WebRTC P2P calls with incoming call modals, busy detection, and reliable signaling via a singleton event bus. Authentication via Supabase (email + Google/GitHub OAuth). Built with Next.js 15 App Router, React 19, Zustand, TanStack Query, Redis adapter for multi-instance Socket.io scaling, and deployed on Render.",
+    tech: ["Next.js 15", "React 19", "TypeScript", "Socket.io", "WebRTC", "Supabase", "PostgreSQL", "Redis", "Zustand", "TanStack Query", "Tailwind CSS", "Framer Motion", "Radix UI", "PWA", "Web Push"],
+    live: "https://nexus-ezh1.onrender.com",
+    code: "https://github.com/ranjanpalai69/nexus",
+  },
   {
     id: 7,
     title: "Snake & Ladder — Real-Time 3D Multiplayer Game",

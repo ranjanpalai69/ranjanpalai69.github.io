@@ -30,29 +30,38 @@ export const Introduction = () => {
               I am a <span className="different">B.Tech (CSE)</span> graduate
               currently building production-grade software at{" "}
               <span className="different">Splitbit Innovative Solutions</span>,
-              Hyderabad. My recent work includes architecting the{" "}
+              Hyderabad. My work spans enterprise design systems, AI-powered
+              platforms, real-time applications, and serverless cloud
+              architectures — including the{" "}
               <span className="different">Noedra Design System</span> for{" "}
               <span className="different">Siemens Energy</span> (49+ Web
-              Components in Lit 3), leading development of{" "}
-              <span className="different">Lexibit</span> — an AI-powered OCR
-              automation platform (Next.js 15 PWA + GPT-4o-mini + Zoho /
-              QuickBooks integrations), and contributing to the{" "}
+              Components), <span className="different">Lexibit</span> (AI OCR
+              automation platform), the{" "}
               <span className="different">Global Fintech Fest 2025</span>{" "}
-              platform via Strapi CMS.
+              platform, and a fully serverless{" "}
+              <span className="different">SEO Intelligence</span> system on AWS.
             </h4>
             <h4 style={{ marginTop: "0.8em" }}>
-              I specialise in{" "}
+              I have hands-on experience building{" "}
+              <span className="different">real-time systems</span> with{" "}
+              <span className="different">Socket.io</span> — including live
+              messaging with typing indicators and read receipts,{" "}
+              <span className="different">WebRTC</span> peer-to-peer audio/video
+              calling, presence tracking, and{" "}
+              <span className="different">Web Push notifications</span> (VAPID)
+              for backgrounded browsers. I also built{" "}
+              <span className="different">Nexus</span>, a full-stack social
+              media platform with stories, DMs, calling, and PWA support.
+            </h4>
+            <h4 style={{ marginTop: "0.8em" }}>
+              I am a <span className="different">true full-stack developer</span>{" "}
+              who picks up new technologies fast — whether it's a new framework,
+              cloud service, or tool, I adapt quickly and ship confidently. My
+              stack covers{" "}
               <span className="different">
-                React.js, Next.js, TypeScript, Node.js
-              </span>{" "}
-              and{" "}
-              <span className="different">
-                AWS serverless architectures
+                React.js, Next.js, TypeScript, Node.js, AWS Lambda, Docker
               </span>
-              , with experience in mobile development (
-              <span className="different">React Native, Swift</span>) and
-              enterprise tooling (Docker, Kubernetes, Playwright, Web
-              Components).
+              , and everything in between.
             </h4>
             <h4 style={{ marginTop: "1em" }}>When I'm not coding:</h4>
             <h4 className="different">
